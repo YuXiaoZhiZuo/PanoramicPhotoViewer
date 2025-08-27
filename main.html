@@ -380,10 +380,6 @@
                 // 添加控制器
                 controls = new THREE.OrbitControls(camera, renderer.domElement);
                 
-                // 缩放
-                controls.enableZoom = true;
-                controls.zoomSpeed = 1.0;
-                
                 // 反转鼠标拖拽方向
                 controls.mouseButtons = {
                     LEFT: THREE.MOUSE.ROTATE,
@@ -399,12 +395,6 @@
                 controls.minDistance = 0.1;
                 controls.maxDistance = 2;
                 controls.screenSpacePanning = false;
-                
-                // 移动设备双指缩放
-                controls.touches = {
-                    ONE: THREE.TOUCH.ROTATE,
-                    TWO: THREE.TOUCH.DOLLY_PAN
-                };
                 
                 // 加载第一张图片
                 loadPanorama(presetImages[currentImageIndex]);
